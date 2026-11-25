@@ -228,7 +228,7 @@
 
   // 1. Console note for anyone who opens the developer tools.
   console.log('%cHello, curious one.', 'font: 700 18px ui-monospace, Menlo, monospace; color: #17e05c; background: #00080a; padding: 6px 12px;');
-  console.log("Reading the console? Let's talk: cdwellington@mun.ca");
+  console.log("Reading the console? Let's talk: Wellingtonchiebuka@gmail.com");
   console.log('There are a few more things hidden around this page.');
 
   // 2. Tab title joke.

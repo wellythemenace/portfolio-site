@@ -1,0 +1,14 @@
+/* TEAM */
+Developer: Chiebuka Wellington
+Contact: cdwellington@mun.ca
+GitHub: https://github.com/wellythemenace
+Location: St. John's, Newfoundland and Labrador, Canada
+
+/* THANKS */
+Everyone who reads the console, decodes the binary and clicks the pins in order.
+
+/* SITE */
+Built with: HTML, CSS and a little JavaScript. No framework, no build step.
+Fonts: Barlow Condensed, Public Sans
+Idea: a drawing under review, because I like building tools for reviewing drawings.
+Last update: 2026/11/24

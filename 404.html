@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Revision not found | Chiebuka Wellington</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    .nf { min-height: 100vh; display: grid; place-items: center; padding: 2rem var(--gutter); }
+    .nf-inner { width: min(34rem, 100%); }
+    .nf-inner h1 { font-size: clamp(2.6rem, 8vw, 4rem); margin-top: 1.75rem; }
+    .nf-inner p { margin-top: .9rem; max-width: 30em; }
+    .nf-inner .actions { margin-top: 1.5rem; }
+    .nf .pin-wrap { animation-delay: .3s; }
+    .nf .pin-note { display: grid; }
+  </style>
+</head>
+<body>
+  <main class="nf">
+    <div class="nf-inner">
+      <div class="sheet" role="img" aria-label="A drawing sheet with a missing part marked by a red pin">
+        <svg class="drawing" viewBox="0 0 600 460" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+          <defs>
+            <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#c5d2dc" stroke-width="0.6"/></pattern>
+          </defs>
+          <rect width="600" height="460" fill="url(#grid)"/>
+          <rect x="150" y="140" width="300" height="180" rx="24" fill="none" stroke="#6f8aa0" stroke-width="2" stroke-dasharray="10 7"/>
+          <path d="M150 140L450 320M450 140L150 320" stroke="#6f8aa0" stroke-width="1.2" stroke-dasharray="4 6"/>
+          <rect x="12" y="12" width="576" height="436" fill="none" stroke="#14212b" stroke-width="1.6"/>
+        </svg>
+        <div class="pin-wrap" style="--x:50%;--y:47%;--i:0" data-side="right">
+          <button class="pin" type="button" tabindex="-1" aria-hidden="true">!</button>
+          <div class="pin-note"><strong>404</strong><span>This part is not in the drawing set.</span></div>
+        </div>
+      </div>
+      <h1>Revision not found</h1>
+      <p>This page may have moved, or the link may be wrong.</p>
+      <p class="actions"><a class="btn primary" href="/">Back to the portfolio</a></p>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chiebuka Wellington | Computer Science student</title>
+  <meta name="description" content="Portfolio of Chiebuka Wellington, a Computer Science student at Memorial University who builds backend and full-stack software.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="author" href="humans.txt">
+  <script>
+    // Play the intro every time the page opens, except for people who asked for less motion.
+    (function () {
+      try {
+        var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (!reduce) document.documentElement.classList.add("intro");
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <div id="intro" aria-hidden="true">
+    <canvas id="rain"></canvas>
+    <div class="intro-text"><p id="intro-bits"></p><p id="intro-line1"></p><p id="intro-line2"></p></div>
+    <button type="button" id="intro-skip" tabindex="0">Skip intro</button>
+  </div>
+  <a class="skip" href="#projects">Skip to projects</a>
+
+  <header class="bar">
+    <div class="bar-inner">
+      <a class="brand" href="#top">Chiebuka Wellington</a>
+      <nav aria-label="Sections">
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#societies">Societies</a>
+        <a href="#skills">Skills</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a class="resume" href="Resume.pdf">Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="name">
+      <div class="hero-text">
+        <h1 id="name">Chiebuka Wellington</h1>
+        <p class="lede">Computer Science student at Memorial University. I build backend and full-stack software: Java and Spring Boot services, Python APIs and React front ends.</p>
+        <p class="status">Looking for a work term.</p>
+        <p class="actions">
+          <a class="btn primary" href="#projects">View projects</a>
+          <a class="btn" href="Resume.pdf">Download resume</a>
+        </p>
+      </div>
+
+      <figure class="sheet-wrap">
+        <div class="sheet" id="sheet">
+          <svg class="drawing" viewBox="0 0 600 460" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+            <defs>
+              <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+                <path d="M20 0H0V20" fill="none" stroke="#c5d2dc" stroke-width="0.6"/>
+              </pattern>
+              <marker id="tick" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                <path d="M0 5L10 0V10Z" fill="#55718a"/>
+              </marker>
+            </defs>
+            <rect width="600" height="460" fill="url(#grid)"/>
+            <!-- part outline -->
+            <path d="M120 150h300a40 40 0 0 1 40 40v70a40 40 0 0 1-40 40H120a40 40 0 0 1-40-40v-70a40 40 0 0 1 40-40z" fill="#fbfcfd" stroke="#14212b" stroke-width="2.4"/>
+            <circle cx="150" cy="225" r="22" fill="none" stroke="#14212b" stroke-width="2"/>
+            <circle cx="390" cy="225" r="22" fill="none" stroke="#14212b" stroke-width="2"/>
+            <rect x="215" y="205" width="110" height="40" rx="20" fill="none" stroke="#14212b" stroke-width="2"/>
+            <!-- centre lines -->
+            <path d="M150 170V280M130 225H170M390 170V280M370 225H410M270 175V275" stroke="#55718a" stroke-width="1" stroke-dasharray="10 4 2 4" fill="none"/>
+            <!-- dimensions -->
+            <path d="M80 118H460" stroke="#55718a" stroke-width="1.2" marker-start="url(#tick)" marker-end="url(#tick)"/>
+            <path d="M80 108V150M460 108V150" stroke="#55718a" stroke-width="1"/>
+            <text x="270" y="110" text-anchor="middle" font-family="Barlow Condensed, Arial Narrow, sans-serif" font-size="16" fill="#14212b">380</text>
+            <path d="M500 150V300" stroke="#55718a" stroke-width="1.2" marker-start="url(#tick)" marker-end="url(#tick)"/>
+            <path d="M462 150H512M462 300H512" stroke="#55718a" stroke-width="1"/>
+            <text x="522" y="230" font-family="Barlow Condensed, Arial Narrow, sans-serif" font-size="16" fill="#14212b" transform="rotate(90 522 230)" text-anchor="middle">150</text>
+            <!-- sheet border -->
+            <rect x="12" y="12" width="576" height="436" fill="none" stroke="#14212b" stroke-width="1.6"/>
+          </svg>
+
+          <div class="pin-wrap" style="--x:27%;--y:34%;--i:0" data-side="right">
+            <button class="pin" type="button" aria-expanded="false" aria-label="Comment 1: Transaction Monitoring System">1</button>
+            <div class="pin-note" hidden>
+              <strong>Transaction Monitoring System</strong>
+              <span>Pluggable fraud rules, an alert queue and an audit trail.</span>
+              <a href="#fraud">Open project</a>
+            </div>
+          </div>
+          <div class="pin-wrap" style="--x:58%;--y:25%;--i:1" data-side="left">
+            <button class="pin" type="button" aria-expanded="false" aria-label="Comment 2: Design Review Tool">2</button>
+            <div class="pin-note" hidden>
+              <strong>Design Review Tool</strong>
+              <span>Pin comments on a drawing, reply and resolve them.</span>
+              <a href="#design">Open project</a>
+            </div>
+          </div>
+          <div class="pin-wrap" style="--x:66%;--y:56%;--i:2" data-side="left">
+            <button class="pin" type="button" aria-expanded="false" aria-label="Comment 3: MUN Course Planner">3</button>
+            <div class="pin-note" hidden>
+              <strong>MUN Course Planner</strong>
+              <span>Semester plans that respect prerequisites and degree rules.</span>
+              <a href="#planner">Open project</a>
+            </div>
+          </div>
+          <div class="pin-wrap" style="--x:36%;--y:60%;--i:3" data-side="right">
+            <button class="pin" type="button" aria-expanded="false" aria-label="Comment 4: Blokus">4</button>
+            <div class="pin-note" hidden>
+              <strong>Blokus (team of 5)</strong>
+              <span>I built the scoring system and save/load.</span>
+              <a href="#blokus">Open project</a>
+            </div>
+          </div>
+
+          <div class="pin-wrap egg-pin" style="--x:84%;--y:40%;--i:0;animation-delay:0s" data-side="left" hidden>
+            <button class="pin" type="button" aria-expanded="false" aria-label="Comment 5: Approved">5</button>
+            <div class="pin-note" hidden>
+              <strong>Approved</strong>
+              <span>Ship it.</span>
+            </div>
+          </div>
+
+          <dl class="title-block">
+            <div><dt>Drawn by</dt><dd>Chiebuka Wellington</dd></div>
+            <div><dt>Program</dt><dd>BSc Computer Science, MUN</dd></div>
+            <div><dt>Status</dt><dd>Open to a work term</dd></div>
+          </dl>
+        </div>
+        <figcaption>Each pin is stored as a fraction of the sheet, the same way my Design Review Tool stores comments, so it stays put at any size. Tap a pin.</figcaption>
+      </figure>
+    </section>
+
+    <section id="projects" class="block" aria-labelledby="projects-h">
+      <h2 id="projects-h">Projects</h2>
+
+      <article class="project" id="fraud">
+        <div class="project-head">
+          <h3>Transaction Monitoring System</h3>
+          <p class="links"><a href="https://github.com/wellythemenace/fraud-monitor">GitHub</a></p>
+        </div>
+        <p>A Spring Boot service that flags suspicious deposits with pluggable rules, queues alerts for an analyst and records every decision. A structuring rule and a profile-deviation rule ship with it, and the analyst gets a drafted case summary built from mock sanctions and public-record data. A person makes the final call.</p>
+        <p class="tech">Java 17, Spring Boot, PostgreSQL, JUnit, Mockito</p>
+      </article>
+
+      <article class="project" id="design">
+        <div class="project-head">
+          <h3>Design Review Tool</h3>
+          <p class="links"><a href="https://github.com/wellythemenace/design-review">GitHub</a></p>
+        </div>
+        <p>Upload a design drawing, click to pin a comment where the problem is, reply in the thread and mark it resolved. Pin positions are stored as fractions of the image, so they stay on the right spot at any zoom or screen size.</p>
+        <p class="tech">React, TypeScript, Vite, FastAPI, SQLite, pytest</p>
+      </article>
+
+      <article class="project" id="planner">
+        <div class="project-head">
+          <h3>MUN Course Planner</h3>
+          <p class="links"><a href="https://github.com/wellythemenace/mun-course-planner">GitHub</a></p>
+        </div>
+        <p>Builds semester-by-semester plans for MUN Computer Science students from the 2026-27 calendar. It enforces prerequisites, co-requisites, offered terms and degree requirements, shows progress toward the major, and lets students rate courses. Averages stay hidden until three people have rated, so one opinion can't decide anything.</p>
+        <p class="tech">Python, FastAPI, SQLite, React, TypeScript, Vite</p>
+      </article>
+
+      <article class="project" id="blokus">
+        <div class="project-head">
+          <h3>Blokus, COMP 2005 group project</h3>
+          <p class="links muted">Private course repository</p>
+        </div>
+        <p>A Java Swing version of the board game Blokus for two to four human or computer players, built by a team of five over four iterations. I built the scoring system and the save and load feature, and helped debug the three-player game.</p>
+        <p class="tech">Java, Swing, object-oriented design, Git</p>
+      </article>
+    </section>
+
+    <section id="experience" class="block" aria-labelledby="experience-h">
+      <h2 id="experience-h">Experience</h2>
+      <article class="job">
+        <div class="project-head">
+          <h3>Work Control Assistant</h3>
+          <p class="links muted">Jul 2025 to present</p>
+        </div>
+        <p class="where">Memorial University Housing Office</p>
+        <ul>
+          <li>Log, track and update maintenance work orders in StarRez for the Facilities Management Work Control Center.</li>
+          <li>Review incoming service requests and keep departments, technicians and supervisors informed so jobs get done on time.</li>
+          <li>Keep facility information, equipment records and preventive maintenance schedules accurate and up to date.</li>
+          <li>Work with administrative staff to keep mail and work order tracking running smoothly.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="societies" class="block" aria-labelledby="societies-h">
+      <h2 id="societies-h">Societies and clubs</h2>
+      <!-- TODO: if you hold a role or have dates in any of these, add them next to "Active member". -->
+      <article class="job">
+        <div class="project-head">
+          <h3>MUN Computer Science Society</h3>
+          <p class="links muted">Active member</p>
+        </div>
+        <p>Help organize events, workshops and networking for Computer Science students, with a focus on building skills and meeting people in industry.</p>
+      </article>
+      <article class="job">
+        <div class="project-head">
+          <h3>MUN Quant Society</h3>
+          <p class="links muted">Active member</p>
+        </div>
+        <p>Take part in workshops, competitions and discussions on quantitative finance, algorithmic trading and financial modelling.</p>
+      </article>
+      <article class="job">
+        <div class="project-head">
+          <h3>MUN Lions Club</h3>
+          <p class="links muted">Active member</p>
+        </div>
+        <p>Volunteer on community service projects, fundraising and outreach.</p>
+      </article>
+    </section>
+
+    <section id="skills" class="block" aria-labelledby="skills-h">
+      <h2 id="skills-h">Skills</h2>
+      <dl class="skills">
+        <div><dt>Languages</dt><dd><ul class="skill-list">
+            <li><img class="ico" src="https://skillicons.dev/icons?i=java&amp;theme=light" alt="" width="36" height="36" loading="lazy" data-fallback="Ja"><span>Java</span></li>
+            <li><img class="ico" src="https://skillicons.dev/icons?i=py&amp;theme=light" alt="" width="36" height="36" loading="lazy" data-fallback="Py"><span>Python</span></li>
+            <li><img class="ico" src="https://skillicons.dev/icons?i=ts&amp;theme=light" alt="" width="36" height="36" loading="lazy" data-fallback="TS"><span>TypeScript</span></li>
+            <li><img class="ico" src="https://skillicons.dev/icons?i=js&amp;theme=light" alt="" width="36" height="36" loading="lazy" data-fallback="JS"><span>JavaScript</span></li>
+            <li><span class="ico mono" aria-hidden="true">SQL</span><span>SQL</span></li>
+            <li><img class="ico" src="https://skillicons.dev/icons?i=html&amp;theme=light" alt="" width="36" height="36" loading="lazy" data-fallback="HT"><span>HTML</span></li>
+            <li><img class="ico" src="https://skillicons.dev/icons?i=css&amp;theme=light" alt="" width="36" height="36" loading="lazy" data-fallback="CS"><span>CSS</span></li>
+        </ul></dd></div>
+        <div><dt>Frameworks</dt><dd><ul class="skill-list">
+            <li><img class="ico" src="https://skillicons.dev/icons?i=spring&amp;theme=light" alt="" width="36" height="36" loading="lazy" data-fallback="Sp"><span>Spring Boot</span></li>
+            <li><img class="ico" src="https://skillicons.dev/icons?i=fastapi&amp;theme=light" alt="" width="36" height="36" loading="lazy" data-fallback="FA"><span>FastAPI</span></li>
+            <li><img class="ico" src="https://skillicons.dev/icons?i=react&amp;theme=light" alt="" width="36" height="36" loading="lazy" data-fallback="Re"><span>React</span></li>
+            <li><img class="ico" src="https://skillicons.dev/icons?i=vite&amp;theme=light" alt="" width="36" height="36" loading="lazy" data-fallback="Vi"><span>Vite</span></li>
+        </ul></dd></div>
+        <div><dt>Databases</dt><dd><ul class="skill-list">
+            <li><img class="ico" src="https://skillicons.dev/icons?i=postgres&amp;theme=light" alt="" width="36" height="36" loading="lazy" data-fallback="Pg"><span>PostgreSQL</span></li>
+            <li><img class="ico" src="https://skillicons.dev/icons?i=sqlite&amp;theme=light" alt="" width="36" height="36" loading="lazy" data-fallback="SQ"><span>SQLite</span></li>
+        </ul></dd></div>
+        <div><dt>Testing</dt><dd><ul class="skill-list">
+            <li><span class="ico mono" aria-hidden="true">JU</span><span>JUnit</span></li>
+            <li><span class="ico mono" aria-hidden="true">Mo</span><span>Mockito</span></li>
+            <li><img class="ico" src="https://skillicons.dev/icons?i=pytest&amp;theme=light" alt="" width="36" height="36" loading="lazy" data-fallback="pt"><span>pytest</span></li>
+            <li><span class="ico mono" aria-hidden="true">ut</span><span>unittest</span></li>
+        </ul></dd></div>
+        <div><dt>Tools</dt><dd><ul class="skill-list">
+            <li><img class="ico" src="https://skillicons.dev/icons?i=git&amp;theme=light" alt="" width="36" height="36" loading="lazy" data-fallback="Gi"><span>Git</span></li>
+            <li><img class="ico" src="https://skillicons.dev/icons?i=github&amp;theme=light" alt="" width="36" height="36" loading="lazy" data-fallback="GH"><span>GitHub</span></li>
+            <li><span class="ico mono" aria-hidden="true">API</span><span>REST APIs</span></li>
+        </ul></dd></div>
+      </dl>
+    </section>
+
+    <section id="about" class="block" aria-labelledby="about-h">
+      <h2 id="about-h">About</h2>
+      <p>I'm a third-year Computer Science student at Memorial University of Newfoundland. I like turning a messy real-world rule set, whether it's fraud patterns or a degree calendar, into software that explains its own decisions. This term I'm taking Artificial Intelligence and Introduction to Machine Learning.</p>
+      <p>I'm looking for a work term where I can ship real software on a team.</p>
+      <!-- TODO: add your expected graduation month and year here once you decide to show it. -->
+    </section>
+
+    <section id="contact" class="block" aria-labelledby="contact-h">
+      <h2 id="contact-h">Contact</h2>
+      <ul class="contact">
+        <li><a href="mailto:cdwellington@mun.ca">cdwellington@mun.ca</a></li>
+        <li><a href="https://github.com/wellythemenace">github.com/wellythemenace</a></li>
+        <!-- TODO: add your LinkedIn link here:
+        <li><a href="https://www.linkedin.com/in/YOUR-NAME">LinkedIn</a></li> -->
+        <li><a href="Resume.pdf">Resume (PDF)</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p>Chiebuka Wellington, St. John's, Newfoundland</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
